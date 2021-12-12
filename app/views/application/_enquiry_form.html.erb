@@ -1,0 +1,99 @@
+<div class="fix-form">
+  <form id="onairdream_form" name="onairdream" method="post" action="/" enctype="multipart/form-data">
+    <div class="onairdream-form home-banner-form">
+      <h3 style="border-radius: 10px 10px 0px 0px" >Book Domestic &amp; International Flights</h3>
+      <div class="col-md-12 select-trip d-flex" style="justify-content: space-around;">
+        <p>
+          <label class="radio-inline">
+            <input id="radio1" type="radio" onclick="show2();" name="trip[round_trip]" checked="" value="Round Trip">Round Trip
+          </label>
+        </p>
+        <p>
+          <label class="radio-inline">
+            <input id="radio2" type="radio" onclick="show1();" name="trip[one_way]" value="One Way">One Way
+          </label>
+        </p>
+        <p>
+          <label class="radio-inline">
+            <input id="radio3" type="radio" onclick="show2();" name="trip[multi_city]" value="Multi City">Multi City
+          </label>
+        </p>
+      </div>
+
+      <div class="col-md-12 d-flex" >
+	      <div class="col-md-6 p-1">
+	        <div class="form-group">
+	          <input id="from" name="trip[from]" autocomplete="off" placeholder="From*" type="text">
+	          <i class="fa fa-map-marker" aria-hidden="true"></i>
+	        </div>
+	      </div>
+	      <div class="col-md-6 p-1">
+	        <div class="form-group">
+	          <input id="to" name="trip[to]" autocomplete="off" placeholder="To*" type="text">
+	          <i class="fa fa-plane" aria-hidden="true"></i>
+	        </div>
+	      </div>
+      </div>
+
+      <div class="col-md-12 d-flex" >
+	      <div class="col-md-6 col-xs-6 p-1">
+	        <div class="form-group">
+	          <input id="depart" name="trip[depart]" placeholder="Departure*" readonly="true" type="date">
+	          <i class="fa fa-calendar" aria-hidden="true"></i>
+	        </div>
+	      </div>
+	      <div id="div1" class="col-md-6 col-xs-6 p-1">
+	        <div class="form-group">
+	          <input id="return" name="trip[return]" placeholder="Return*" readonly="true" type="date">
+	          <i class="fa fa-calendar" aria-hidden="true"></i>
+	        </div>
+	      </div>
+      </div>
+
+      <div class="col-md-12 d-flex" >
+	      <div class="col-md-6 col-xs-6 p-1">
+	        <div class="form-group">
+	          <input id="name" name="trip[name]" placeholder="Name*" type="text">
+	          <i class="fa fa-user" aria-hidden="true"></i>
+	        </div>
+	      </div>
+	      <div class="col-md-6 col-xs-6 p-1">
+	        <div class="form-group">
+	          <input id="mobile" name="trip[mobile]" placeholder="Contact No*" type="tel" class="" required="true">
+	          <i class="fa fa-phone" aria-hidden="true"></i>
+	        </div>
+	      </div>
+      </div>
+
+      <div class="col-md-12 col-xs-12 p-1">
+        <div class="form-group">
+          <input id="email" name="trip[email]" placeholder="Email*" type="email" required="true">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12 p-1">
+        <div class="form-group mb-0">
+          <button class="submit-btn" type="submit" name="Search_Flight">Book Now</button>
+        </div>
+      </div>
+
+      <div class="security-badge hidden-xs">
+        <div class="col-xs-2">
+          <img src="<%= asset_path('security-icon.svg') %>" alt="On Air Dream Security">
+        </div>
+        <div class="col-xs-10">
+          <h6>100% SAFE. NO SPAM.</h6>
+        </div>
+      </div>
+    </div>
+    <script>
+    function show1() {
+        document.getElementById('return').disabled = true;
+    }
+
+    function show2() {
+        document.getElementById('return').disabled = false;
+    }
+    </script>
+  </form>
+</div>
