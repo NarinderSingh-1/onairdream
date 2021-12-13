@@ -1,21 +1,22 @@
 <div class="fix-form">
-  <form id="onairdream_form" name="onairdream" method="post" action="/" enctype="multipart/form-data">
+  <form id="onairdream_form" name="onairdream" method="post" action="<%= travel_enquiry_path %>" enctype="multipart/form-data">
+    <input type="hidden" value="<%= form_authenticity_token() %>" name="authenticity_token"/>
     <div class="onairdream-form home-banner-form">
       <h3 style="border-radius: 10px 10px 0px 0px" >Book Domestic &amp; International Flights</h3>
       <div class="col-md-12 select-trip d-flex" style="justify-content: space-around;">
         <p>
           <label class="radio-inline">
-            <input id="radio1" type="radio" onclick="show2();" name="trip[round_trip]" checked="" value="Round Trip">Round Trip
+            <input id="radio1" type="radio" onclick="show2();" name="trip[trip_type]" checked="" value="Round Trip" style="margin-right: 2px;">Round Trip
           </label>
         </p>
         <p>
           <label class="radio-inline">
-            <input id="radio2" type="radio" onclick="show1();" name="trip[one_way]" value="One Way">One Way
+            <input id="radio2" type="radio" onclick="show1();" name="trip[trip_type]" value="One Way" style="margin-right: 2px;">One Way
           </label>
         </p>
         <p>
           <label class="radio-inline">
-            <input id="radio3" type="radio" onclick="show2();" name="trip[multi_city]" value="Multi City">Multi City
+            <input id="radio3" type="radio" onclick="show2();" name="trip[trip_type]" value="Multi City" style="margin-right: 2px;">Multi City
           </label>
         </p>
       </div>
@@ -23,13 +24,13 @@
       <div class="col-md-12 d-flex" >
 	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-	          <input id="from" name="trip[from]" autocomplete="off" placeholder="From*" type="text">
+	          <input id="from" name="trip[from]" autocomplete="off" placeholder="From*" type="text" required="true">
 	          <i class="fa fa-map-marker" aria-hidden="true"></i>
 	        </div>
 	      </div>
 	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-	          <input id="to" name="trip[to]" autocomplete="off" placeholder="To*" type="text">
+	          <input id="to" name="trip[to]" autocomplete="off" placeholder="To*" type="text" required="true">
 	          <i class="fa fa-plane" aria-hidden="true"></i>
 	        </div>
 	      </div>
@@ -38,14 +39,12 @@
       <div class="col-md-12 d-flex" >
 	      <div class="col-md-6 col-xs-6 p-1">
 	        <div class="form-group">
-	          <input id="depart" name="trip[depart]" placeholder="Departure*" readonly="true" type="date">
-	          <i class="fa fa-calendar" aria-hidden="true"></i>
+            <input type="date" id="departure" name="trip[depart]" placeholder="Departure*">
 	        </div>
 	      </div>
 	      <div id="div1" class="col-md-6 col-xs-6 p-1">
 	        <div class="form-group">
-	          <input id="return" name="trip[return]" placeholder="Return*" readonly="true" type="date">
-	          <i class="fa fa-calendar" aria-hidden="true"></i>
+	          <input id="return" name="trip[return]" placeholder="Return*" type="date">
 	        </div>
 	      </div>
       </div>
@@ -53,7 +52,7 @@
       <div class="col-md-12 d-flex" >
 	      <div class="col-md-6 col-xs-6 p-1">
 	        <div class="form-group">
-	          <input id="name" name="trip[name]" placeholder="Name*" type="text">
+	          <input id="name" name="trip[name]" placeholder="Name*" type="text" required="true">
 	          <i class="fa fa-user" aria-hidden="true"></i>
 	        </div>
 	      </div>
@@ -88,11 +87,12 @@
     </div>
     <script>
     function show1() {
-        document.getElementById('return').disabled = true;
+      debugger
+      document.getElementById('return').disabled = true;
     }
 
     function show2() {
-        document.getElementById('return').disabled = false;
+      document.getElementById('return').disabled = false;
     }
     </script>
   </form>
