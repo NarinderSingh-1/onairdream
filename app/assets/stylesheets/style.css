@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 0 0px 21px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 55px;
   right: 15px;
-  bottom: 15px;
+  /*bottom: 15px;*/
   left: 15px;
   padding: 10px 0;
   background-color: #fff;
@@ -1089,7 +1089,7 @@ section {
 }
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #e1e3ef;
 }
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
@@ -1111,7 +1111,7 @@ section {
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #444444;
+  color: #28b6e9;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1130,7 +1130,7 @@ section {
   line-height: 1;
 }
 #footer .footer-top .footer-links ul li {
-  padding: 10px 0;
+  padding: 8px 0;
   display: flex;
   align-items: center;
 }
@@ -1138,7 +1138,7 @@ section {
   padding-top: 0;
 }
 #footer .footer-top .footer-links ul a {
-  color: #777777;
+  color: #000000;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1291,4 +1291,42 @@ font-weight: 600;
 background: #fcb839;
 text-align: center;
 transition: all 0.5s ease-in-out 0s;
+}
+
+/*Blink Call icon*/
+.call_link {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.call_link a{
+  padding-left: 2px;
+  font-weight: bold;
+  color: #d50f0f;
+  font-size: x-large;
+}
+.call_link .blink {
+  color: #fcb839;
+  padding-top: 10px;
+  animation: blinker 0.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+ @keyframes blinker {
+     from {
+         opacity: 1;
+    }
+     to {
+         opacity: 0;
+    }
+}
+.canada{
+  color: #ff0000;
+}
+.india {
+  color: #138808;
+}
+.footer-logo{
+  position: absolute;
+  padding-top: 2px;
+  font-size: x-large;
 }

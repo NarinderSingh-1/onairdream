@@ -1,13 +1,32 @@
 class HomeController < ApplicationController
+	before_action :footer_list
+
 	def index
+		# @source = [["Canada","Canada"],["Australia","Australia"],["America","America"]]
+		@source = ["Canada","Italy","Australia","Austria","America","New York","Canada","Italy","Australia","Austria","America","New York"]
 	end
 
 	def travel_enquiry
-		@trip_detail = params[:trip]
+		begin
+			@trip_detail = params[:trip]
 
-		EnquiryMailer.with(trip_detail: @trip_detail).travel_enquiry_email.deliver_now
-		flash[:success] = "Thank you for your order! We'll get contact you soon!"
-		redirect_to root_path
+			EnquiryMailer.with(trip_detail: @trip_detail).travel_enquiry_email.deliver_now
+			flash[:notice] = "Thank you #{@trip_detail[:name]} for your Inquiry! We'll get contact you soon!"
+			redirect_to root_path
+		rescue => e
+			flash[:error] = "Error #{e.message}"
+			redirect_to root_path
+		end
 	end
 
+	def contact_us
+	end
+
+	private
+
+		def footer_list
+			@destinations = ['Delhi','Mumbai','Hyderabad','Bangalore','Kolkata','Chennai','Cochin', 'Amritsar']
+			@airlines = ['Qatar Airways', 'Etihad Airways', 'British Airways', 'Air India', 'Air Canada', 'United Airline',
+			'Singapur Airline', 'Lufthansa']
+		end
 end

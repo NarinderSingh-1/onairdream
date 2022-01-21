@@ -1,0 +1,37 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:notice]%>
+  </div>
+<% elsif flash[:error]%>
+  <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:error]%>
+  </div>
+ <% elsif flash[:alert] %>
+  <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:alert]%>
+  </div>
+<% end %>
+
+<style type="text/css">
+	.alert{
+		text-align: center;
+	}
+  .alert-success{
+    color: green;
+    width: 100%;
+  }
+  .alert-danger{
+    color: red;
+    width: 100%;
+  }
+  .alert-warning{
+    color: orange;
+    width: 100%;
+  }
+  .alert button{
+  	float: right;
+  }
+</style>

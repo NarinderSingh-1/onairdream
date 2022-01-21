@@ -1,5 +1,6 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" style="height: 100vh;" class="d-flex flex-column justify-content-center align-items-center">
+	<%= render 'alerts'%>
 	<div class="container">
 		<div class="row col-md-12">
 			<div class="container text-center text-md-left col-md-5" data-aos="fade-up">
@@ -15,14 +16,18 @@
 </section>
 <!-- End Hero -->
 
-<main id="main">
+<div class="trustpilot" style="text-align: center;background: #144e88;">
+    <img src="<%= asset_path('trustpilot-logo.png') %>" style="margin: 0 auto;text-align: center;display: block;">
+    <a style="display: inline-block;margin: 20px 0;color: #fff;text-decoration: underline;" href="https://www.trustpilot.com/review/onairdream.com" target="_blank">View our reviews/ provide your review</a>
+</div>
 
+<main id="main">
 	<!-- ======= What We Do Section ======= -->
 	<section id="what-we-do" class="what-we-do">
 	  <div class="container">
 
 	    <div class="section-title">
-	      <h2>What We Do</h2>
+	      <h2 alt="why book with on air dream">Why Choose Us</h2>
 	      <p>We put continuous efforts to see the complete satisfaction of clients by taking care of small travel needs and the demand of travelers.</p>
 	    </div>
 
@@ -39,7 +44,8 @@
 	        <div class="icon-box">
 	          <div class="icon"><i class="bx bx-file"></i></div>
 	          <h4><a href="">Best Plans</a></h4>
-	          <p>If you are an adventurer or a business person, and generally aim on availing cost effective but best plans, then Onairdream is the one stop solution for you.</p>
+	          <p>Best Prices Guaranteed. We are committed to excellence, honesty, & integrity Exclusive  Offers for your travel, hotels. You will enjoy your travel at ease and peace with our 24x7x365 fast services, that are just a call away.</p>
+	          <!-- <p>If you are an adventurer or a business person, and generally aim on availing cost effective but best plans, then Onairdream is the one stop solution for you.</p> -->
 	        </div>
 	      </div>
 
@@ -47,7 +53,8 @@
 	        <div class="icon-box">
 	          <div class="icon"><i class="bx bx-tachometer"></i></div>
 	          <h4><a href="">Experts</a></h4>
-	          <p>Our destination experts are explorers with experience and we are committed to delivering memorable tours for families, couples, friends travelers.</p>
+	          <p>We ARE America’s Travel Experts. We have experts in our business on every vacation and destination. We can find out everything you need to know.</p>
+	          <!-- <p>Our destination experts are explorers with experience and we are committed to delivering memorable tours for families, couples, friends travelers.</p> -->
 	        </div>
 	      </div>
 
@@ -56,104 +63,12 @@
 	  </div>
 	</section><!-- End What We Do Section -->
 
-	<!-- ======= About Section ======= -->
-	<section id="about" class="about">
-	  <div class="container">
-
-	    <div class="row">
-	      <div class="col-lg-6">
-	        <img src="<%= asset_path("about.jpg") %>" class="img-fluid" alt="">
-	      </div>
-	      <div class="col-lg-6 pt-4 pt-lg-0">
-	        <h3>About Us</h3>
-	        <p>
-	        	Onairdream is comprised of global travel specialists, offering comprehensive travel solutions with competitive rates and superior service.Be it a family holiday, a cruise, or just flight and hotel bookings,Onairdream is a preferred choice of millions of highly satisfied customers.
-	        </p>
-	        <ul>
-	          <li><i class="bx bx-check-double"></i> Onairdream provides the traveler with high-end travel support services.</li>
-	          <li><i class="bx bx-check-double"></i> Onairdream also provide the reservation and ticketing of airline seats.</li>
-	        </ul>
-	        <div class="row icon-boxes">
-	          <div class="col-md-6">
-	            <i class="bx bx-receipt"></i>
-	            <h4>Corporis voluptates sit</h4>
-	            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-	          </div>
-	          <div class="col-md-6 mt-4 mt-md-0">
-	            <i class="bx bx-cube-alt"></i>
-	            <h4>Ullamco laboris nisi</h4>
-	            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-
-	  </div>
-	</section><!-- End About Section -->
-
-	<!-- ======= Services Section ======= -->
-	<section id="services" class="services section-bg">
-	  <div class="container">
-
-	    <div class="section-title">
-	      <h2>Services</h2>
-	      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
-	    </div>
-
-	    <div class="row">
-	      <div class="col-md-6">
-	        <div class="icon-box">
-	          <i class="bi bi-briefcase"></i>
-	          <h4><a href="#">Lorem Ipsum</a></h4>
-	          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-	        </div>
-	      </div>
-	      <div class="col-md-6 mt-4 mt-lg-0">
-	        <div class="icon-box">
-	          <i class="bi bi-card-checklist"></i>
-	          <h4><a href="#">Dolor Sitema</a></h4>
-	          <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-	        </div>
-	      </div>
-	      <div class="col-md-6 mt-4">
-	        <div class="icon-box">
-	          <i class="bi bi-bar-chart"></i>
-	          <h4><a href="#">Sed ut perspiciatis</a></h4>
-	          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-	        </div>
-	      </div>
-	      <div class="col-md-6 mt-4">
-	        <div class="icon-box">
-	          <i class="bi bi-binoculars"></i>
-	          <h4><a href="#">Nemo Enim</a></h4>
-	          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-	        </div>
-	      </div>
-	      <div class="col-md-6 mt-4">
-	        <div class="icon-box">
-	          <i class="bi bi-brightness-high"></i>
-	          <h4><a href="#">Magni Dolore</a></h4>
-	          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-	        </div>
-	      </div>
-	      <div class="col-md-6 mt-4">
-	        <div class="icon-box">
-	          <i class="bi bi-calendar4-week"></i>
-	          <h4><a href="#">Eiusmod Tempor</a></h4>
-	          <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-	        </div>
-	      </div>
-	    </div>
-
-	  </div>
-	</section><!-- End Services Section -->
-
 	<!-- ======= Portfolio Section ======= -->
 	<section id="portfolio" class="portfolio">
 	  <div class="container">
 
 	    <div class="section-title">
-	      <h2>Portfolio</h2>
+	      <h2>Our Popular Destinations</h2>
 	      <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
 	    </div>
 
@@ -310,6 +225,98 @@
 	  </div>
 	</section><!-- End Portfolio Section -->
 
+	<!-- ======= About Section ======= -->
+	<section id="about" class="about">
+	  <div class="container">
+
+	    <div class="row">
+	      <div class="col-lg-6">
+	        <img src="<%= asset_path("about.jpg") %>" class="img-fluid" alt="">
+	      </div>
+	      <div class="col-lg-6 pt-4 pt-lg-0">
+	        <h3>About Us</h3>
+	        <p>
+	        	Onairdream is comprised of global travel specialists, offering comprehensive travel solutions with competitive rates and superior service.Be it a family holiday, a cruise, or just flight and hotel bookings,Onairdream is a preferred choice of millions of highly satisfied customers.
+	        </p>
+	        <ul>
+	          <li><i class="bx bx-check-double"></i> Onairdream provides the traveler with high-end travel support services.</li>
+	          <li><i class="bx bx-check-double"></i> Onairdream also provide the reservation and ticketing of airline seats.</li>
+	        </ul>
+	        <div class="row icon-boxes">
+	          <div class="col-md-6">
+	            <i class="bx bx-receipt"></i>
+	            <h4>Corporis voluptates sit</h4>
+	            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+	          </div>
+	          <div class="col-md-6 mt-4 mt-md-0">
+	            <i class="bx bx-cube-alt"></i>
+	            <h4>Ullamco laboris nisi</h4>
+	            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	  </div>
+	</section><!-- End About Section -->
+
+	<!-- ======= Services Section ======= -->
+	<section id="services" class="services section-bg">
+	  <div class="container">
+
+	    <div class="section-title">
+	      <h2>Services</h2>
+	      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+	    </div>
+
+	    <div class="row">
+	      <div class="col-md-6">
+	        <div class="icon-box">
+	          <i class="bi bi-briefcase"></i>
+	          <h4><a href="#">Lorem Ipsum</a></h4>
+	          <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+	        </div>
+	      </div>
+	      <div class="col-md-6 mt-4 mt-lg-0">
+	        <div class="icon-box">
+	          <i class="bi bi-card-checklist"></i>
+	          <h4><a href="#">Dolor Sitema</a></h4>
+	          <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+	        </div>
+	      </div>
+	      <div class="col-md-6 mt-4">
+	        <div class="icon-box">
+	          <i class="bi bi-bar-chart"></i>
+	          <h4><a href="#">Sed ut perspiciatis</a></h4>
+	          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+	        </div>
+	      </div>
+	      <div class="col-md-6 mt-4">
+	        <div class="icon-box">
+	          <i class="bi bi-binoculars"></i>
+	          <h4><a href="#">Nemo Enim</a></h4>
+	          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+	        </div>
+	      </div>
+	      <div class="col-md-6 mt-4">
+	        <div class="icon-box">
+	          <i class="bi bi-brightness-high"></i>
+	          <h4><a href="#">Magni Dolore</a></h4>
+	          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+	        </div>
+	      </div>
+	      <div class="col-md-6 mt-4">
+	        <div class="icon-box">
+	          <i class="bi bi-calendar4-week"></i>
+	          <h4><a href="#">Eiusmod Tempor</a></h4>
+	          <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+	        </div>
+	      </div>
+	    </div>
+
+	  </div>
+	</section><!-- End Services Section -->
+
 	<!-- ======= Testimonials Section ======= -->
 	<section id="testimonials" class="testimonials section-bg">
 	  <div class="container">
@@ -460,74 +467,6 @@
 	  </div>
 	</section><!-- End Team Section -->
 
-	<!-- ======= Contact Section ======= -->
-	<section id="contact" class="contact section-bg">
-	  <div class="container">
+	
 
-	    <div class="section-title">
-	      <h2>Contact</h2>
-	      <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga</p>
-	    </div>
-
-	    <div class="row mt-5 justify-content-center">
-
-	      <div class="col-lg-10">
-
-	        <div class="info-wrap">
-	          <div class="row">
-	            <div class="col-lg-4 info">
-	              <i class="bi bi-geo-alt"></i>
-	              <h4>Location:</h4>
-	              <p>A108 Adam Street<br>New York, NY 535022</p>
-	            </div>
-
-	            <div class="col-lg-4 info mt-4 mt-lg-0">
-	              <i class="bi bi-envelope"></i>
-	              <h4>Email:</h4>
-	              <p>info@example.com<br>contact@example.com</p>
-	            </div>
-
-	            <div class="col-lg-4 info mt-4 mt-lg-0">
-	              <i class="bi bi-phone"></i>
-	              <h4>Call:</h4>
-	              <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
-	            </div>
-	          </div>
-	        </div>
-
-	      </div>
-
-	    </div>
-
-	    <div class="row mt-5 justify-content-center">
-	      <div class="col-lg-10">
-	        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-	          <div class="row">
-	            <div class="col-md-6 form-group">
-	              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-	            </div>
-	            <div class="col-md-6 form-group mt-3 mt-md-0">
-	              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-	            </div>
-	          </div>
-	          <div class="form-group mt-3">
-	            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-	          </div>
-	          <div class="form-group mt-3">
-	            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-	          </div>
-	          <div class="my-3">
-	            <div class="loading">Loading</div>
-	            <div class="error-message"></div>
-	            <div class="sent-message">Your message has been sent. Thank you!</div>
-	          </div>
-	          <div class="text-center"><button type="submit">Send Message</button></div>
-	        </form>
-	      </div>
-
-	    </div>
-
-	  </div>
-	</section><!-- End Contact Section -->
-
-</main><!-- End #main -->
+</main><!-- End #main

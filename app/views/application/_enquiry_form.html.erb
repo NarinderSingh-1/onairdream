@@ -1,6 +1,6 @@
 <div class="fix-form">
-  <form id="onairdream_form" name="onairdream" method="post" action="<%= travel_enquiry_path %>" enctype="multipart/form-data">
-    <input type="hidden" value="<%= form_authenticity_token() %>" name="authenticity_token"/>
+  <%= form_tag travel_enquiry_path,{name: "onairdream", id: "onairdream_form", multipart: true} do %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <div class="onairdream-form home-banner-form">
       <h3 style="border-radius: 10px 10px 0px 0px" >Book Domestic &amp; International Flights</h3>
       <div class="col-md-12 select-trip d-flex" style="justify-content: space-around;">
@@ -24,7 +24,12 @@
       <div class="col-md-12 d-flex" >
 	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-	          <input id="from" name="trip[from]" autocomplete="off" placeholder="From*" type="text" required="true">
+            <input id="from" name="trip[from]" list="cities" class="form-control" placeholder="From*" required="true">
+            <datalist id="cities">
+              <% @source.each do |city| %>
+                <option value="<%= city %>" name="<%= city %> sds">
+              <% end  %>
+            </datalist>
 	          <i class="fa fa-map-marker" aria-hidden="true"></i>
 	        </div>
 	      </div>
@@ -87,7 +92,6 @@
     </div>
     <script>
     function show1() {
-      debugger
       document.getElementById('return').disabled = true;
     }
 
@@ -95,5 +99,5 @@
       document.getElementById('return').disabled = false;
     }
     </script>
-  </form>
+  <% end %>
 </div>

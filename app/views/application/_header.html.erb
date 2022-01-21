@@ -14,22 +14,34 @@
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="/">Flights to India</a></li>
+        <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
+        <li><a class="nav-link scrollto" href="/">Flights</a></li>
+        <li><a class="nav-link scrollto" href="/"><span class="canada">CANADA</span>-<span class="india">INDIA</span></a></li>
         <li><a class="nav-link scrollto" href="/">Business class Tickets</a></li>
         <li><a class="nav-link scrollto" href="/">Last Minute Deals</a></li>
-
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto" href="/">Blog</a></li>
+        <li><a  style="color: green;" class="nav-link scrollto" href="/">Win a Cash!</a></li>
+        <li class="call_link" ><i class="blink fa fa-phone-square fa-2x"></i><a class="nav-link scrollto" href="<%= contact_us_path %>">+91-9646612142</a></li>
+        <!-- <li style="display: flex;align-items: center;" ><i class="bi bi-twitter"></i><a style="padding-left: 0px;" class="nav-link scrollto" href="<%= contact_us_path %>">+91-9646612142</a></li> -->
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i class="bi bi-list mobile-nav-toggle" onclick="mobile_nav(this)"></i>
     </nav><!-- .navbar -->
 
-    <div class="header-social-links d-flex align-items-center">
+<!--     <div class="header-social-links d-flex align-items-center">
       <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
     </div>
+ -->
 
   </div>
 </header><!-- End Header -->
+
+<script>
+  function mobile_nav(_this){
+    document.getElementById('navbar').classList.toggle('navbar-mobile');
+    _this.classList.toggle('bi-list');
+    _this.classList.toggle('bi-x');
+  }
+  </script>

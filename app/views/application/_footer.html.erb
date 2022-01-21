@@ -4,63 +4,66 @@
   <div class="footer-top">
     <div class="container">
       <div class="row">
-
-        <div class="col-lg-3 col-md-6 footer-contact">
-          <h3>On Air Dream</h3>
-          <p>
-            A108 Adam Street <br>
-            New York, NY 535022<br>
-            United States <br><br>
-            <strong>Phone:</strong> +1 872-348-7001<br>
-            <strong>Email:</strong> support@onairdream.com<br>
-          </p>
-        </div>
-
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
+        <div class="col footer-links">
+          <div class="logo me-auto">
+            <h4>
+              <a href="/">
+                <img style="max-height: 30px;" src="<%= asset_path("onairdream_icon.png") %>" alt="On Air Dream, cheap flights" title="onAirDream">
+              </a><span class="footer-logo" >n<span style="color:#fcb839">air</span>dream</span>
+            </h4>
+          </div>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="<%= contact_us_path %>">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Cancellation Policy</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Disclaimer</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
+        <div class="col footer-links">
+          <h4>Popular destinations</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <% @destinations.each do |location| %>
+              <li><a href="#">Flights to <%= location %></a></li>
+            <% end %>
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Join Our Newsletter</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Subscribe">
-          </form>
+        <div class="col footer-links">
+          <h4>POPULAR AIRLINES</h4>
+          <ul>
+            <% @airlines.each do |airline| %>
+              <li><a href="#"><%= airline %></a></li>
+            <% end %>
+          </ul>
         </div>
 
+        <div class="col footer-links">
+          <h4>MORE TRAVEL OPTIONS</h4>
+          <ul>
+            <li><a href="#">Chicago to Hyderabad Flights</a></li>
+            <li><a href="#">New York to Delhi Flights</a></li>
+            <li><a href="#">Boston to Mumbai Flights</a></li>
+            <li><a href="#">San Francisco to Ahmedabad Flights</a></li>
+            <li><a href="#">Orlando to Delhi Flights</a></li>
+            <li><a href="#">Los Angeles to Hyderabad Flights</a></li>
+            <li><a href="#">Chicago to Chennai Flights</a></li>
+            <li><a href="#">Houston to Delhi Flights</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="container d-md-flex py-4">
-
     <div class="me-md-auto text-center text-md-start">
       <div class="copyright">
         &copy; Copyright <strong><span>onAirDream</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
         Designed by <a href="https://onairdream.com/">onAirDream</a>
       </div>
     </div>
