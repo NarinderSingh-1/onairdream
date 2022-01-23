@@ -15,12 +15,12 @@
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> -->
-        <li><a class="nav-link scrollto" href="/">Flights</a></li>
+        <li><a class="nav-link scrollto" href="<%= flights_path %>">Flights</a></li>
         <li><a class="nav-link scrollto" href="/"><span class="canada">CANADA</span>-<span class="india">INDIA</span></a></li>
-        <li><a class="nav-link scrollto" href="/">Business class Tickets</a></li>
-        <li><a class="nav-link scrollto" href="/">Last Minute Deals</a></li>
-        <li><a class="nav-link scrollto" href="/">Blog</a></li>
-        <li><a  style="color: green;" class="nav-link scrollto" href="/">Win a Cash!</a></li>
+        <li><a class="nav-link scrollto" href="<%= business_class_path %>">Business class</a></li>
+        <li><a class="nav-link scrollto" href="<%= last_minute_path %>">Last Minute Deals</a></li>
+        <li><a class="nav-link scrollto" href="<%= blogs_path %>">Blog</a></li>
+        <li><a  style="color: green;" class="nav-link scrollto" href="<%= win_cash_path %>">Win a Cash!</a></li>
         <li class="call_link" ><i class="blink fa fa-phone-square fa-2x"></i><a class="nav-link scrollto" href="<%= contact_us_path %>">+91-9646612142</a></li>
         <!-- <li style="display: flex;align-items: center;" ><i class="bi bi-twitter"></i><a style="padding-left: 0px;" class="nav-link scrollto" href="<%= contact_us_path %>">+91-9646612142</a></li> -->
       </ul>

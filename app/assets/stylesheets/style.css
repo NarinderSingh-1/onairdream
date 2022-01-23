@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0 !important;
 }
 
 .section-bg {
@@ -377,7 +377,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  /*padding-bottom: 30px;*/
 }
 .section-title h2 {
   font-size: 32px;
@@ -1329,4 +1329,46 @@ transition: all 0.5s ease-in-out 0s;
   position: absolute;
   padding-top: 2px;
   font-size: x-large;
+}
+figure .img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  padding: 15px !important;
+  height: 65px !important;
+}
+
+.portfolio-info .call-now {
+  font-size: x-large;
+}
+.portfolio-info .call-now a{
+  float: right;
+  font-weight: 600;
+}
+.portfolio .portfolio-wrap:hover {
+  cursor: pointer;
+}
+
+#services .bx {
+  line-height: 1 !important;
+}
+.icon-box svg {
+  width: 40px;
+  height: 40px;
+  color: #3498db;
+}
+
+#business_class .heading {
+  color: #28b6e9;
+  font-weight: bolder;
+}
+
+#business_class .heading span{
+  color: #fcb839;
+}
+
+#business_class .detail{
+  text-align: justify;
 }

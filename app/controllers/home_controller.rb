@@ -22,6 +22,21 @@ class HomeController < ApplicationController
 	def contact_us
 	end
 
+	def business_class
+	end
+
+	def last_minute
+	end
+
+	def blogs
+	end
+
+	def win_cash
+	end
+
+	def flights
+	end
+
 	private
 
 		def footer_list
