@@ -1,0 +1,34 @@
+<section id="hero" style="height: 80vh;background: url('<%= asset_path("canada-to-india.jpg") %>') center center;" class="d-flex flex-column justify-content-center align-items-center">
+	<%= render 'alerts'%>
+	<div class="container">
+		<div class="row col-md-12">
+			<div class="container text-center text-md-left col-md-5" data-aos="fade-up">
+		    <%= render 'enquiry_form'%>
+			</div>
+			<div class="container text-center text-md-left col-md-7" data-aos="fade-up">
+			</div>
+		</div>
+	</div>
+</section>
+
+<main id="main">
+	<!-- ======= Portfolio Section ======= -->
+	<%= render 'partials/portfolios' %>
+
+	<!-- ======= CheapFlights Section ======= -->
+	<section id="business_class" class="">
+	  <div class="container">
+	  	<div class="row col-md-12">
+	  		<h1 class="heading">Cheap Flights <span>Canada to India</span></h1>
+	  		<div class="row col-md-12">
+	  			<% @canada_cities.each do |city| %>
+			  		<div class="col-md-3">
+			  			<i class="bx bxs-plane-take-off"></i>
+			  			<a href="tel:9646612142" alt="Cheap Flights <%= city %> to India">Flights <%= city.downcase %> to India</a>
+			  		</div>
+		  		<% end %>
+	  		</div>
+	  	</div>
+		</div>
+	</section>
+</main>

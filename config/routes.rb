@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "/blogs" => "home#blogs", :as => :blogs
   get "/win_cash" => "home#win_cash", :as => :win_cash
   get "/flights" => "home#flights", :as => :flights
+  get "/canada_to_india" => "home#canada_to_india", :as => :canada_to_india
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

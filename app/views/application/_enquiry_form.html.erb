@@ -24,10 +24,10 @@
       <div class="col-md-12 d-flex" >
 	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-            <input id="from" name="trip[from]" list="cities" class="form-control" placeholder="From*" required="true">
-            <datalist id="cities">
+            <input id="from" name="trip[from]" list="fromCities" class="form-control" placeholder="From*" required="true">
+            <datalist id="fromCities">
               <% @source.each do |city| %>
-                <option value="<%= city %>" name="<%= city %> sds">
+                <option value="<%= city %>">
               <% end  %>
             </datalist>
 	          <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -35,33 +35,38 @@
 	      </div>
 	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-	          <input id="to" name="trip[to]" autocomplete="off" placeholder="To*" type="text" required="true">
+            <input id="to" name="trip[to]" list="toCities" class="form-control" autocomplete="off" placeholder="To*" type="text" required="true">
+            <datalist id="toCities">
+              <% @source.each do |city| %>
+                <option value="<%= city %>">
+              <% end  %>
+            </datalist>
 	          <i class="fa fa-plane" aria-hidden="true"></i>
 	        </div>
 	      </div>
       </div>
 
       <div class="col-md-12 d-flex" >
-	      <div class="col-md-6 col-xs-6 p-1">
+	      <div class="col-md-6 p-1">
 	        <div class="form-group">
-            <input type="date" id="departure" name="trip[depart]" placeholder="Departure*">
+            <input type="date" id="departure" name="trip[depart]" placeholder="Departure*" style="padding: 9px 5px;">
 	        </div>
 	      </div>
 	      <div id="div1" class="col-md-6 col-xs-6 p-1">
 	        <div class="form-group">
-	          <input id="return" name="trip[return]" placeholder="Return*" type="date">
+	          <input id="return" name="trip[return]" placeholder="Return*" type="date" style="padding: 9px 5px;">
 	        </div>
 	      </div>
       </div>
 
       <div class="col-md-12 d-flex" >
-	      <div class="col-md-6 col-xs-6 p-1">
+	      <div class="col-md-6 p-1">
 	        <div class="form-group">
 	          <input id="name" name="trip[name]" placeholder="Name*" type="text" required="true">
 	          <i class="fa fa-user" aria-hidden="true"></i>
 	        </div>
 	      </div>
-	      <div class="col-md-6 col-xs-6 p-1">
+	      <div class="col-md-6 p-1">
 	        <div class="form-group">
 	          <input id="mobile" name="trip[mobile]" placeholder="Contact No*" type="tel" class="" required="true">
 	          <i class="fa fa-phone" aria-hidden="true"></i>
